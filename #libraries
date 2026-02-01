@@ -1,0 +1,27 @@
+#libraries
+library(data.table)
+library(sp)
+library(rgdal)
+library(dplyr)
+library(ggpubr)
+library(grid)
+library(leaflet)
+
+#read in data table
+mar_dat = fread("Maryland.csv")
+
+#convert to data table
+mar_dat = as.data.table(mar_dat)
+
+#table of total incidents by community
+#filter places outside of chicago communities
+#final number of observations = 1021
+chi_tab = chi_dat[community!=""]
+
+#make data spatial
+coordinates(mar_dat) = c("google_longitude","google_latitude")
+coord_cartesian(mar_dat) = c("google_longitude","google_latitude")
+crs.geo1 = CRS("+proj=longlat")
+proj4string(chi_tab) = crs.geo1
+
+plot(chi_tab, pch = 20, col = "steelblue")

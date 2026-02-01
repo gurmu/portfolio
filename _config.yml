@@ -1,0 +1,13 @@
+title: Ashenafi Gurmu, PhD
+tagline: Senior Data Scientist | Generative AI Technical Lead
+description: Senior Generative AI Engineer and Data Scientist delivering secure, mission-critical AI systems in federal and enterprise environments.
+url: "https://gurmu.github.io"
+baseurl: "/portfolio"
+email: agurmu@gmail.com
+phone: "+1 240-755-9064"
+linkedin: https://www.linkedin.com/in/ashenafi-gurmu/
+github: https://github.com/gurmu
+permalink: /blog/:title/
+timezone: America/New_York
+plugins:
+  - jekyll-feed
