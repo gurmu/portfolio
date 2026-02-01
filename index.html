@@ -147,6 +147,47 @@ title: Ashenafi Gurmu, PhD
  </div>
 </section>
 
+<section id="implementation" class="section alt reveal">
+ <div class="container">
+ <div class="section-header">
+ <h2>Technical Implementation</h2>
+ <a class="text-link" href="{{ "/projects/" | relative_url }}">See full technical portfolio</a>
+ </div>
+ <p class="section-intro">Hands-on delivery patterns for secure GenAI systems - built for auditability, scale, and mission reliability.</p>
+ <div class="implementation-grid">
+ <article class="impl-card">
+ <h3>Secure RAG Pipeline</h3>
+ <p>Hybrid retrieval with semantic + lexical fusion, hardened by audit logging and prompt injection defense.</p>
+ <pre><code>vector = faiss_index.search(query, k=6)
+lexical = bm25.search(query, k=6)
+ctx = rerank(merge(vector, lexical))
+answer = llm.respond(ctx, guardrails=True)</code></pre>
+ </article>
+ <article class="impl-card">
+ <h3>Agentic Orchestration</h3>
+ <p>Multi-agent workflows with policy-aware routing and deterministic tool execution.</p>
+ <pre><code>route = policy_router(user_intent)
+agent = graph.select(route)
+result = agent.run(tools=approved_tools)</code></pre>
+ </article>
+ <article class="impl-card">
+ <h3>Mission LLMOps</h3>
+ <p>Versioned prompts, evaluation suites, and drift monitoring in regulated environments.</p>
+ <pre><code>run = eval_suite(prompt, dataset)
+score = scorecard(run, safety=True)
+publish_if(score &gt; 0.92)</code></pre>
+ </article>
+ <article class="impl-card">
+ <h3>Zero-Trust Runtime</h3>
+ <p>Fine-grained controls, context redaction, and compliance-ready audit trails.</p>
+ <pre><code>ctx = redact(secrets, pii, ctx)
+log = audit(event, actor, model, latency)
+enforce(zta_policies, ctx)</code></pre>
+ </article>
+ </div>
+ </div>
+</section>
+
 <section id="experience" class="section alt reveal">
  <div class="container">
  <h2>Experience</h2>

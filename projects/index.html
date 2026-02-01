@@ -1,0 +1,106 @@
+---
+layout: default
+title: Technical Portfolio
+---
+
+<section class="section">
+  <div class="container">
+    <h1>Technical Portfolio</h1>
+    <p class="section-intro">A deeper look at how I build secure GenAI systems. Client details are generalized for security, but the patterns, architectures, and outcomes are real.</p>
+
+    <div class="diagram">
+      <div class="diagram-title">Mission AI Delivery Pipeline</div>
+      <div class="diagram-row">
+        <div class="diagram-node">Data Ingestion<br><span>Secure sources, governance</span></div>
+        <div class="diagram-node">RAG Indexing<br><span>FAISS / Pinecone / Chroma</span></div>
+        <div class="diagram-node">Agent Orchestration<br><span>LangGraph / policy router</span></div>
+        <div class="diagram-node">Serving Layer<br><span>Bedrock / Azure / Docker</span></div>
+        <div class="diagram-node">Audit + Eval<br><span>TruLens / PromptLayer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2>Implementation Highlights</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Hybrid Retrieval + Rerank</h3>
+        <p>Combines semantic and lexical retrieval for legal, clinical, and policy documents.</p>
+        <pre><code>vector = faiss.search(query, k=8)
+lexical = bm25.search(query, k=8)
+ctx = rerank(merge(vector, lexical))</code></pre>
+      </article>
+      <article class="card">
+        <h3>Policy-Aware Agent Routing</h3>
+        <p>Ensures deterministic tool usage and prevents unsafe actions.</p>
+        <pre><code>route = policy_router(intent)
+agent = graph.select(route)
+result = agent.run(tools=approved)</code></pre>
+      </article>
+      <article class="card">
+        <h3>Security and Compliance</h3>
+        <p>Redaction, audit trails, and zero-trust controls for mission systems.</p>
+        <pre><code>ctx = redact(secrets, pii, ctx)
+log = audit(event, actor, model)
+validate(zta_policy, ctx)</code></pre>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Selected Systems (Anonymized)</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>DoD - GenAI Risk Intelligence</h3>
+        <p>Classified risk assessment platform with secure RAG and mission decision support.</p>
+        <ul>
+          <li>Sub-second responses with audited retrieval</li>
+          <li>Zero incident security across testing</li>
+          <li>Streamlit interface on Databricks</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>DHS - Policy Assistant</h3>
+        <p>Conversational assistant for policy interpretation with deterministic tooling.</p>
+        <ul>
+          <li>Multi-agent orchestration</li>
+          <li>60 percent faster response cycles</li>
+          <li>End-to-end auditability</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>VA - Clinical Documentation</h3>
+        <p>HIPAA-compliant RAG pipeline for medical classification and coding.</p>
+        <ul>
+          <li>LoRA / PEFT fine-tuning</li>
+          <li>Voice-enabled workflows</li>
+          <li>$3.2M annual savings</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2>Roadmap - What I am Building Next</h2>
+    <div class="roadmap">
+      <div class="roadmap-item">
+        <h3>Autonomous Compliance Agents</h3>
+        <p>Agent workflows that automatically verify system outputs against policy constraints.</p>
+      </div>
+      <div class="roadmap-item">
+        <h3>Multimodal Mission Assistants</h3>
+        <p>Image + text + voice pipelines for rapid situational awareness and decision support.</p>
+      </div>
+      <div class="roadmap-item">
+        <h3>Evaluation at Scale</h3>
+        <p>Automated eval suites for reliability, bias, safety, and operational readiness.</p>
+      </div>
+    </div>
+  </div>
+</section>

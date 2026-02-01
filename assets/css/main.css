@@ -75,6 +75,17 @@ img {
   left: 16px;
 }
 
+.billboard {
+  padding: 18px 0 0;
+  background: #0b1210;
+}
+
+.billboard img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(10, 18, 16, 0.55);
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -284,6 +295,24 @@ img {
   box-shadow: 0 8px 20px rgba(27, 27, 27, 0.08);
 }
 
+.card pre,
+.impl-card pre,
+.post-card pre,
+.post-row pre {
+  background: #111815;
+  color: #f2e9da;
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-top: 14px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.card code,
+.impl-card code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 .card h3 {
   font-size: 1.2rem;
   margin-bottom: 12px;
@@ -320,6 +349,78 @@ img {
   padding: 10px 16px;
   border-radius: 999px;
   font-weight: 600;
+}
+
+.implementation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.impl-card {
+  background: #121a17;
+  color: #f2e9da;
+  border-radius: 20px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.impl-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.impl-card p {
+  color: #c7d0c5;
+}
+
+.diagram {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 10px 24px rgba(27, 27, 27, 0.12);
+}
+
+.diagram-title {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.diagram-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.diagram-node {
+  background: #f3efe8;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(27, 27, 27, 0.12);
+  font-weight: 700;
+  text-align: center;
+}
+
+.diagram-node span {
+  display: block;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.roadmap-item {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid var(--stroke);
 }
 
 .timeline {

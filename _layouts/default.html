@@ -13,6 +13,12 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <div class="billboard">
+    <div class="container">
+      <img src="{{ "/assets/images/wordcloud.svg" | relative_url }}" alt="Resume keyword word cloud banner">
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
@@ -24,6 +30,7 @@
           <a href="{{ "/#expertise" | relative_url }}">Expertise</a>
           <a href="{{ "/#experience" | relative_url }}">Experience</a>
           <a href="{{ "/#credentials" | relative_url }}">Credentials</a>
+          <a href="{{ "/projects/" | relative_url }}">Technical</a>
           <a href="{{ "/blog/" | relative_url }}">Blog</a>
           <a class="cta" href="{{ "/#contact" | relative_url }}">Contact</a>
         </div>
