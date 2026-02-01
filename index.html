@@ -72,6 +72,9 @@ title: Ashenafi Gurmu, PhD
  <p class="section-intro">Client identities are intentionally generalized for security. Each project reflects production delivery with measurable outcomes.</p>
  <div class="card-grid">
  <article class="card">
+ <div class="project-visual project-visual-dod">
+ <span>Risk Intelligence</span>
+ </div>
  <h3>DoD - GenAI Risk Intelligence Platform</h3>
  <p>Architected a classified risk assessment platform with real-time RAG workflows on Databricks MosaicAI and a secure Streamlit interface.</p>
  <ul>
@@ -81,6 +84,9 @@ title: Ashenafi Gurmu, PhD
  </ul>
  </article>
  <article class="card">
+ <div class="project-visual project-visual-irs">
+ <span>Legislative AI</span>
+ </div>
  <h3>IRS - Legislative AI Intelligence</h3>
  <p>Built a hybrid RAG system for tax code analysis using AWS Bedrock with Claude/GPT-4 as reasoning cores.</p>
  <ul>
@@ -90,6 +96,9 @@ title: Ashenafi Gurmu, PhD
  </ul>
  </article>
  <article class="card">
+ <div class="project-visual project-visual-dhs">
+ <span>Policy Assistant</span>
+ </div>
  <h3>DHS - Executive Order AI Assistant</h3>
  <p>Delivered a secure conversational AI system for policy interpretation with multi-agent workflows and deterministic tooling.</p>
  <ul>
@@ -99,6 +108,9 @@ title: Ashenafi Gurmu, PhD
  </ul>
  </article>
  <article class="card">
+ <div class="project-visual project-visual-va">
+ <span>Clinical AI</span>
+ </div>
  <h3>VA - Clinical Documentation AI</h3>
  <p>Implemented HIPAA-compliant RAG for medical coding and classification using fine-tuned LLMs and voice workflows.</p>
  <ul>
@@ -108,6 +120,9 @@ title: Ashenafi Gurmu, PhD
  </ul>
  </article>
  <article class="card">
+ <div class="project-visual project-visual-dos">
+ <span>Diplomatic Search</span>
+ </div>
  <h3>DoS - Diplomatic Knowledge Search</h3>
  <p>Engineered multilingual semantic search across diplomatic cables and policy documents with GPT-4 and FAISS.</p>
  <ul>
@@ -117,6 +132,9 @@ title: Ashenafi Gurmu, PhD
  </ul>
  </article>
  <article class="card">
+ <div class="project-visual project-visual-transport">
+ <span>Traffic Intelligence</span>
+ </div>
  <h3>State Transportation - Traffic Intelligence</h3>
  <p>Built LSTM/SARIMAX forecasting pipelines for real-time traffic prediction on Databricks with PySpark streaming.</p>
  <ul>
@@ -153,102 +171,76 @@ title: Ashenafi Gurmu, PhD
  <h2>Technical Implementation</h2>
  <a class="text-link" href="{{ "/projects/" | relative_url }}">See full technical portfolio</a>
  </div>
- <p class="section-intro">A dashboard view of delivery outcomes - measurable results, visual diagnostics, and the engineering decisions behind them.</p>
- <div class="dashboard-grid">
- <article class="dashboard-card">
- <div class="dash-header">
+ <p class="section-intro">A visual snapshot of how the systems perform in production: latency, reliability, coverage, and governance at a glance.</p>
+ <div class="tech-dashboard">
+ <div class="tech-main">
+ <div class="tech-hero">
  <div>
- <p class="dash-eyebrow">Secure RAG Pipeline</p>
- <h3>Retrieval Quality + Speed</h3>
+ <p class="dash-eyebrow">Mission Control</p>
+ <h3>End-to-End GenAI Delivery</h3>
+ <p class="tech-hero-copy">Secure ingestion to audited responses with policy-aware routing and continuous evaluation.</p>
  </div>
- <span class="dash-badge">Operational</span>
- </div>
- <div class="dash-metrics">
+ <div class="tech-hero-metrics">
  <div>
  <span class="metric-value">0.8s</span>
- <span class="metric-label">Median latency</span>
+ <span class="metric-label">Median response time</span>
  </div>
  <div>
  <span class="metric-value">99%</span>
  <span class="metric-label">Retrieval precision</span>
  </div>
  <div>
- <span class="metric-value">8.4k</span>
- <span class="metric-label">Docs indexed</span>
+ <span class="metric-value">92%</span>
+ <span class="metric-label">Workflow reliability</span>
  </div>
+ </div>
+ </div>
+ <div class="tech-grid">
+ <div class="tech-card">
+ <div class="tech-card-header">
+ <h4>Secure RAG Pipeline</h4>
+ <span class="dash-badge">Operational</span>
  </div>
  <div class="chart-bar">
- <span style="width:82%"></span>
+ <span style="width:84%"></span>
  </div>
- <div class="dash-snippet">
+ <div class="tech-snippet">
  <span>hybrid = merge(faiss, bm25)</span>
  <span>ctx = rerank(hybrid)</span>
  <span>answer = llm.respond(ctx)</span>
  </div>
- </article>
-
- <article class="dashboard-card">
- <div class="dash-header">
- <div>
- <p class="dash-eyebrow">Agentic Orchestration</p>
- <h3>Workflow Reliability</h3>
  </div>
+ <div class="tech-card">
+ <div class="tech-card-header">
+ <h4>Agentic Orchestration</h4>
  <span class="dash-badge">Governed</span>
  </div>
  <div class="sparkline">
  <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
  </div>
- <div class="dash-metrics">
- <div>
- <span class="metric-value">92%</span>
- <span class="metric-label">Task success</span>
- </div>
- <div>
- <span class="metric-value">0</span>
- <span class="metric-label">Unsafe tools invoked</span>
- </div>
- </div>
- <div class="dash-snippet">
+ <div class="tech-snippet">
  <span>route = policy_router(intent)</span>
  <span>agent = graph.select(route)</span>
  <span>result = agent.run(approved)</span>
  </div>
- </article>
-
- <article class="dashboard-card">
- <div class="dash-header">
- <div>
- <p class="dash-eyebrow">Mission LLMOps</p>
- <h3>Evaluation Scorecard</h3>
  </div>
+ <div class="tech-card">
+ <div class="tech-card-header">
+ <h4>Mission LLMOps</h4>
  <span class="dash-badge">Audited</span>
  </div>
  <div class="radial">
  <div class="radial-inner">92</div>
  </div>
- <div class="dash-metrics">
- <div>
- <span class="metric-value">0.92</span>
- <span class="metric-label">Safety score</span>
- </div>
- <div>
- <span class="metric-value">12</span>
- <span class="metric-label">Eval suites</span>
- </div>
- </div>
- <div class="dash-snippet">
+ <div class="tech-snippet">
  <span>run = eval(prompt, dataset)</span>
  <span>score = scorecard(run)</span>
  <span>publish_if(score &gt; 0.92)</span>
  </div>
- </article>
-
- <article class="dashboard-card">
- <div class="dash-header">
- <div>
- <p class="dash-eyebrow">Zero-Trust Runtime</p>
- <h3>Compliance Coverage</h3>
  </div>
+ <div class="tech-card">
+ <div class="tech-card-header">
+ <h4>Zero-Trust Runtime</h4>
  <span class="dash-badge">Zero-Trust</span>
  </div>
  <div class="stacked-bars">
@@ -256,12 +248,34 @@ title: Ashenafi Gurmu, PhD
  <div><span style="width:84%"></span><span>Audit trails</span></div>
  <div><span style="width:76%"></span><span>Policy enforcement</span></div>
  </div>
- <div class="dash-snippet">
+ <div class="tech-snippet">
  <span>ctx = redact(pii, secrets)</span>
  <span>log = audit(event, actor)</span>
  <span>enforce(zta_policy, ctx)</span>
  </div>
- </article>
+ </div>
+ </div>
+ </div>
+ <aside class="tech-side">
+ <div class="tech-side-card">
+ <h4>Operational Readiness</h4>
+ <div class="ring">
+ <div class="ring-inner">A+</div>
+ </div>
+ <p>Security hardened, audit-backed, and deployed in zero-trust environments.</p>
+ <div class="tech-side-tags">
+ <span>RAG</span><span>LLMOps</span><span>Security</span><span>Compliance</span>
+ </div>
+ </div>
+ <div class="tech-side-card">
+ <h4>Outcome Highlights</h4>
+ <ul>
+ <li>50% research time reduction</li>
+ <li>60% faster policy responses</li>
+ <li>$3.2M annual savings</li>
+ </ul>
+ </div>
+ </aside>
  </div>
  </div>
 </section>
