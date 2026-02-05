@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+
+  <!-- SEO Meta Tags -->
+  <meta name="author" content="Ashenafi Gurmu">
+  <meta name="keywords"
+    content="GenAI, LLMOps, Agentic AI, LangGraph, RAG, Fine-tuning, AI Engineer, Machine Learning, Federal AI, Databricks, Azure OpenAI">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="{{ '/assets/images/profile.jpg' | absolute_url }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ '/assets/images/profile.jpg' | absolute_url }}">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0a0e27">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="top">
+    <div class="scroll-progress"></div>
     <div class="container header-inner">
-      <a class="brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      <a class="brand" href="{{ " /" | relative_url }}">{{ site.title }}</a>
       <nav class="site-nav" aria-label="Primary">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
         <div id="nav-links" class="nav-links">
-          <a href="{{ "/#about" | relative_url }}">About</a>
-          <a href="{{ "/#work" | relative_url }}">Mission Work</a>
-          <a href="{{ "/#expertise" | relative_url }}">Expertise</a>
-          <a href="{{ "/#experience" | relative_url }}">Experience</a>
-          <a href="{{ "/#credentials" | relative_url }}">Credentials</a>
-          <a href="{{ "/projects/" | relative_url }}">Technical</a>
-          <a href="{{ "/blog/" | relative_url }}">Blog</a>
-          <a class="cta" href="{{ "/#contact" | relative_url }}">Contact</a>
+          <a href="{{ " /#about" | relative_url }}">About</a>
+          <a href="{{ " /#work" | relative_url }}">Mission Work</a>
+          <a href="{{ " /#expertise" | relative_url }}">Expertise</a>
+          <a href="{{ " /#experience" | relative_url }}">Experience</a>
+          <a href="{{ " /#credentials" | relative_url }}">Credentials</a>
+          <a href="{{ " /projects/" | relative_url }}">Technical</a>
+          <a href="{{ " /blog/" | relative_url }}">Blog</a>
+          <a class="cta" href="{{ " /#contact" | relative_url }}">Contact</a>
         </div>
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
       </nav>
     </div>
   </header>
@@ -40,19 +71,21 @@
     <div class="container footer-inner">
       <div>
         <div class="footer-title">{{ site.title }}</div>
-        <p>Senior Generative AI Engineer and Data Scientist focused on secure, mission-ready systems.</p>
+        <p>Senior GenAI Architect and LLMOps Engineer focused on secure, mission-ready agentic AI systems.</p>
       </div>
       <div class="footer-links">
         <a href="{{ site.linkedin }}">LinkedIn</a>
         <a href="{{ site.github }}">GitHub</a>
         <a href="mailto:{{ site.email }}">Email</a>
-        <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+        <a href="{{ " /feed.xml" | relative_url }}">RSS</a>
       </div>
       <div class="footer-meta">(c) {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</div>
     </div>
   </footer>
 
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
-</body>
-</html>
+  <button class="back-to-top" aria-label="Back to top">↑</button>
 
+  <script src="{{ " /assets/js/main.js" | relative_url }}"></script>
+</body>
+
+</html>
