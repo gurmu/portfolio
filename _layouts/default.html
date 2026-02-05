@@ -27,8 +27,10 @@
   <meta name="twitter:description" content="{{ site.description }}">
   <meta name="twitter:image" content="{{ '/assets/images/profile.jpg' | absolute_url }}">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
   <!-- Fonts -->
-  <link rel="stylesheet" href="{{ " /assets/css/main.css" | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -45,18 +47,18 @@
   <header class="site-header" id="top">
     <div class="scroll-progress"></div>
     <div class="container header-inner">
-      <a class="brand" href="{{ " /" | relative_url }}">{{ site.title }}</a>
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="site-nav" aria-label="Primary">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
         <div id="nav-links" class="nav-links">
-          <a href="{{ " /#about" | relative_url }}">About</a>
-          <a href="{{ " /#work" | relative_url }}">Mission Work</a>
-          <a href="{{ " /#expertise" | relative_url }}">Expertise</a>
-          <a href="{{ " /#experience" | relative_url }}">Experience</a>
-          <a href="{{ " /#credentials" | relative_url }}">Credentials</a>
-          <a href="{{ " /projects/" | relative_url }}">Technical</a>
-          <a href="{{ " /blog/" | relative_url }}">Blog</a>
-          <a class="cta" href="{{ " /#contact" | relative_url }}">Contact</a>
+          <a href="{{ '/#about' | relative_url }}">About</a>
+          <a href="{{ '/#work' | relative_url }}">Mission Work</a>
+          <a href="{{ '/#expertise' | relative_url }}">Expertise</a>
+          <a href="{{ '/#experience' | relative_url }}">Experience</a>
+          <a href="{{ '/#credentials' | relative_url }}">Credentials</a>
+          <a href="{{ '/projects/' | relative_url }}">Technical</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a class="cta" href="{{ '/#contact' | relative_url }}">Contact</a>
         </div>
         <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
       </nav>
@@ -77,15 +79,15 @@
         <a href="{{ site.linkedin }}">LinkedIn</a>
         <a href="{{ site.github }}">GitHub</a>
         <a href="mailto:{{ site.email }}">Email</a>
-        <a href="{{ " /feed.xml" | relative_url }}">RSS</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
       </div>
-      <div class="footer-meta">(c) {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</div>
+      <div class="footer-meta">&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</div>
     </div>
   </footer>
 
   <button class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script src="{{ " /assets/js/main.js" | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 
 </html>
